@@ -1,7 +1,7 @@
 .wrapper {
     --search-border-radius: 92px;
     --search-height: 46px;
-    --search-top-spacer : 9px;
+    --search-top-spacer: 9px;
     --search-button-width: 52px;
     width: 100%;
     height: var(--default-layout-header-height, 60px);
@@ -12,22 +12,21 @@
 }
 .inner {
     height: 100%;
-    width: var(--default-layout-width); 
+    width: var(--default-layout-width);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.search, .search-result{
-    width: 361px; 
+.search,
+.search-result {
+    width: 361px;
 }
 
- 
-
 .search {
-    position: relative; 
+    position: relative;
     height: var(--search-height);
-    padding-left:16px;
+    padding-left: 16px;
     display: flex;
     background-color: rgba(22, 24, 35, 0.06);
     border-radius: var(--search-border-radius);
@@ -37,14 +36,14 @@
         flex: 1;
         height: 100%;
         color: var(--black);
-        font-size: 1.6rem; 
-        background-color: transparent
+        font-size: 1.6rem;
+        background-color: transparent;
     }
-    input:not(:placeholder-shown) ~ .search-btn{
-       color: rgba(22, 24, 35, 0.75);
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.75);
     }
-    &::after{
-        content: "";
+    &::after {
+        content: '';
         position: absolute;
         width: 1px;
         top: var(--search-top-spacer);
@@ -53,20 +52,19 @@
         background-color: rgba(22, 24, 35, 0.12);
     }
 
-    &:focus-within{
-        border-color: rgba(22, 24, 35, 0.2)
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
     }
 }
 .search-title {
     font-size: 1.4rem;
     font-weight: 600;
     padding: 5px 12px;
-    color: rgba(22, 24, 35, 0.5);;
+    color: rgba(22, 24, 35, 0.5);
 }
 
-
 .clear,
-.loading{
+.loading {
     position: absolute;
     right: calc(var(--search-button-width) + 16px);
     top: 50%;
@@ -74,20 +72,24 @@
     color: rgba(22, 24, 35, 0.34);
 }
 
-.search-btn  {
+.search-btn {
     width: var(--search-button-width);
-    height: 100%; 
+    height: 100%;
     border-top-right-radius: var(--search-border-radius);
     border-bottom-right-radius: var(--search-border-radius);
     font-size: 1.8rem;
     color: rgba(22, 24, 35, 0.34);
 
-    &:hover{
+    &:hover {
         cursor: pointer;
         background-color: rgba(22, 24, 35, 0.03);
     }
-    
-    &:active{
+
+    &:active {
         background-color: rgba(22, 24, 35, 0.06);
     }
+}
+
+.custom-login {
+    color: rgba(22, 24, 35, 0.12);
 }
