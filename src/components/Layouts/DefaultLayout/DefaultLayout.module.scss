@@ -5,10 +5,11 @@
 }
 
 .container {
-    width: var(--default-layout-width); 
+    width: var(--default-layout-width);
+    padding: 0 var(--default-layout-horizontal-spacer);
     display: flex;
 }
 
 .content {
-    flex: 1; 
+    flex: 1;
 }
