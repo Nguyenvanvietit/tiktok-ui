@@ -19,24 +19,24 @@ function Search() {
     const [loading, setLoading] = useState(false);
 
     // thủ thuật Debounce
-    const debounced = useDebounce(searchValue, 500);
+    const debouncedValues = useDebounce(searchValue, 500);
 
     const inputRef = useRef();
 
     useEffect(() => {
-        if (!debounced.trim()) {
+        if (!debouncedValues.trim()) {
             setSearchResult([]);
             return;
         }
         const fetchApi = async () => {
             setLoading(true);
 
-            const result = await searchServices.search(debounced);
+            const result = await searchServices.search(debouncedValues);
             setSearchResult(result);
             setLoading(false);
         };
         fetchApi();
-    }, [debounced]);
+    }, [debouncedValues]);
 
     const handleClear = () => {
         setSearchValue('');
